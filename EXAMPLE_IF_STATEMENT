@@ -4,3 +4,13 @@ ELSEIF [VETS_VET_TRANS] = 'YES' THEN 'Veteran'
 ELSEIF [VETS_VET_TRANS] = 'SPOUSE' THEN 'Veteran Spouse'
 ELSE 'Not Affiliated'
 END
+
+
+//WITH NULL VALUES
+IF ISNULL([Gender]) THEN 'Unknown/Undisclosed'
+ELSEIF [Gender] = 'Gender - Female' THEN 'Female'
+ELSEIF [Gender] = 'Gender - Male' THEN 'Male'
+ELSEIF [Gender] = 'Not Specified' THEN 'Unknown/Undisclosed'
+ELSEIF [Gender] = 'Undisclosed' THEN 'Unknown/Undisclosed'
+ELSE 'Error'
+END
