@@ -1,0 +1,6 @@
+IF [VET_DISABLED_TRANS] = 'YES' THEN 'Veteran'
+ELSEIF [VET_MILITARY_TRANS] = 'YES' THEN 'Veteran'
+ELSEIF [VETS_VET_TRANS] = 'YES' THEN 'Veteran'
+ELSEIF [VETS_VET_TRANS] = 'SPOUSE' THEN 'Veteran Spouse'
+ELSE 'Not Affiliated'
+END
